@@ -1,69 +1,102 @@
-# Welcome to your Lovable project
 
-## Project info
+# Food Ordering System
 
-**URL**: https://lovable.dev/projects/c5432ea3-04f5-49a9-b595-f5947d534a9b
+A MERN stack application for a food ordering system with user authentication, profile management, and order processing.
 
-## How can I edit this code?
+## Project Structure
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/c5432ea3-04f5-49a9-b595-f5947d534a9b) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+/food-ordering-system
+├── /backend
+│   ├── /controllers
+│   ├── /middlewares
+│   ├── /models
+│   ├── /routes
+│   ├── .env
+│   ├── package.json
+│   └── server.js
+└── /frontend
+    ├── /public
+    ├── /src
+    │   ├── /components
+    │   ├── /context
+    │   ├── /hooks
+    │   ├── /lib
+    │   ├── /pages
+    │   └── /services
+    ├── package.json
+    └── vite.config.js
 ```
 
-**Edit a file directly in GitHub**
+## Features
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- User authentication (login/signup)
+- User profile management
+- Food browsing and filtering by categories
+- Shopping cart functionality
+- Order placement (with or without account)
+- Order history for registered users
 
-**Use GitHub Codespaces**
+## Getting Started
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Backend Setup
 
-## What technologies are used for this project?
+1. Navigate to the backend directory:
+   ```
+   cd backend
+   ```
 
-This project is built with .
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-- Vite
-- TypeScript
+3. Create a `.env` file with the following variables:
+   ```
+   PORT=5000
+   MONGODB_URI=mongodb://localhost:27017/food-ordering
+   JWT_SECRET=your_jwt_secret_key
+   ```
+
+4. Start the server:
+   ```
+   npm run dev
+   ```
+
+### Frontend Setup
+
+1. Navigate to the frontend directory:
+   ```
+   cd frontend
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Start the development server:
+   ```
+   npm start
+   ```
+
+## Technologies Used
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JSON Web Tokens (JWT)
+
+### Frontend
 - React
-- shadcn-ui
+- React Router
+- TanStack Query
 - Tailwind CSS
+- Framer Motion
+- Axios
 
-## How can I deploy this project?
+## License
 
-Simply open [Lovable](https://lovable.dev/projects/c5432ea3-04f5-49a9-b595-f5947d534a9b) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+MIT
